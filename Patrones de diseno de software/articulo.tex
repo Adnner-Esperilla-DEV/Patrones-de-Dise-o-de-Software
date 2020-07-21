@@ -1,0 +1,164 @@
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+\usepackage{graphicx}
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Patrones de Diseño de Software$\bullet$ Julio2020 $\bullet$ } % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Patrones de Diseño de Software} % Article title
+\author{Adnner Esperilla }
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent Los patrones de diseño son unas técnicas para resolver problemas comunes en el desarrollo de software y otros ámbitos referentes al diseño de interacción o interfaces. Un patrón de diseño resulta ser una solución a un problema de diseño
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduccion}
+
+\lettrine[nindent=0em,lines=3]{U}na arquitectura orientada a objetos bien estructurada está llena de patrones. La calidad de un sistema orientado a objetos se mide por la atención que los diseñadores han prestado a las colaboraciones entre sus objetos.” “Los patrones conducen a arquitecturas más pequeñas, más simples y más comprensibles
+
+
+
+
+%------------------------------------------------
+
+\section{Objetivos}
+
+\begin{itemize}
+\item Proporcionar catálogos de elementos reusables en el diseño de sistemas de software.
+\item Evitar la reiteración en la búsqueda de soluciones a problemas ya conocidos y solucionados anteriormente.
+\item Formalizar un vocabulario común entre diseñadores.
+\item Estandarizar el modo en que se realiza el diseño.
+
+\end{itemize}
+
+
+
+
+%------------------------------------------------
+
+\section{Desarrollo}
+
+\subsection{¿Qué son los patrones de diseño de software?}
+
+Pues ni más ni menos son formas “estandarizadas” de resolver problemas comunes de diseño en el desarrollo de software.
+Las ventajas del uso de patrones son evidentes:
+\item Conforman un amplio catálogo de problemas y soluciones
+\item Estandarizan la resolución de determinados problemas
+\item Condensan y simplifican el aprendizaje de las buenas prácticas
+\item Proporcionan un vocabulario común entre desarrolladores
+\item Evitan “reinventar la rueda”
+
+
+
+
+\subsection{Tipos de patrones}
+\textbf{-PATRONES CREACIONALES}\\
+Como su nombre indica, estos patrones vienen a solucionar o facilitar las tareas de creación o instanciación de objetos.\\
+Estos patrones hacen hincapié en la encapsulación de la lógica de la instanciación, ocultando los detalles concretos de cada objeto y permitiéndonos trabajar con abstracciones.\\
+Algunos de los patrones creacionales más conocidos son:\\
+\textbf{-Factory:} Desacoplar la lógica de creación de la lógica de negocio, evitando al cliente conocer detalles de la instanciación de los objetos de los que depende.\\
+\textbf{-Abstract Factory:} Nos provee una interfaz que delega la creación de una serie de objetos relacionados sin necesidad de especificar cuáles son las implementaciones concretas.\\
+\textbf{-Factory Method:} Expone un método de creación, delegando en las subclases la implementación de este método.\\
+\textbf{-Builder:} Separa la creación de un objeto complejo de su estructura, de tal forma que el mismo proceso de construcción nos puede servir para crear representaciones diferentes.\\
+
+\textbf{-PATRONES ESTRUCTURALES}\\
+Los patrones estructurales nos ayudan a definir la forma en la que los objetos se componen.
+Los patrones estructurales más habituales son:\\
+\textbf{Adapter:} Nos ayuda a definir una clase intermedia que sirve para que dos clases con diferentes interfaces puedan comunicarse. Esta clase actúa como mediador, haciendo que la clase A pueda ejecutar métodos de la clase B sin conocer detalles de su implementación. También se conoce como Wrapper.\\
+\textbf{Decorator:} Permite añadir funcionalidad extra a un objeto (decora el objeto) sin modificar el comportamiento del resto de instancias.\\
+\textbf{Facade:} Una fachada es un objeto que crea una interfaz simplificada para tratar con otra parte del código más compleja.\\
+\textbf{-PATRONES DE COMPORTAMIENTO}\\
+Los patrones comportamentales nos ayudan a definir la forma en la que los objetos interactúan entre ellos.
+Algunos de los más conocidos (por citar unos pocos) son:\\
+\textbf{Command:} Son objetos que encapsulan una acción y los parámetros que necesitan para ejecutarse.
+Observer: Los objetos son capaces de suscribirse a una serie de eventos que otro objeto va a emitir, y serán avisados cuando esto ocurra.\\
+\textbf{Strategy:} Permite la selección del algoritmo que ejecuta cierta acción en tiempo de ejecución.\\
+\textbf{Template Method:} Especifica el esqueleto de un algoritmo, permitiendo a las subclases definir cómo implementan el comportamiento real.\\
+\end{itemize}
+
+
+
+\section{Conclusiones}
+\item Los patrones de diseño describen la solución a problemas
+que se repiten una y otra vez en nuestros sistemas, de forma
+que se puede usar esa solución siempre que haga falta
+\item Capturan el conocimiento que tienen los expertos a la hora de
+diseñar
+\item Ayudan a generar software “maleable” (software que soporta y
+facilita el cambio, la reutilización y la mejora)
+\item Son guías de diseño, no reglas rigurosas
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+Braude, E. Ingeniería del Software una Perspectiva Orientada a Objetos, 1a edición, 120-425. RA-MA EDITORIAL. Madrid, España (2003).\\
+
+Cristian L. Vidal, Rodolfo F Schmal, Sabino Rivero y Rodolfo H. Villarroel. Extensión del Diagrama de Secuencias UML (Lenguaje de Modelado Unificado) para el Modelado Orientado a Aspectos. Revista Información Tecnológica. ISSN: 0718-0764. [En línea]. Vol. 23(6), (2012)\\
+
+Engineering, S., & Committee, S. IEEE Recommended Practice for Software Requirements Specifications. Institute of Electrical and Electronics Engineers, 1-31 (1998).\\
+
+Fuensanta, M. D. Marco Metodológico para la Mejora de la Eficiencia de Uso de los Procesos Software. Tesis de Doctorado, Universidad Carlos III de Madrid, Madrid, España (2010). \\
+
+Gamma, E., Helm, R., Johnson, R., &Vlisides, J. Design Patterns Elements of Reusable Object Oriented Software. 1-358. Addison Wesley Longman Inc. USA (1998).\\
+ 
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
